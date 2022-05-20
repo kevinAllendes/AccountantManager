@@ -49,15 +49,22 @@ namespace AccountantManager
                     connect.Open();
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    MessageBox.Show(reader.GetString(0));
+
+                    if(reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            MessageBox.Show(reader.GetString(1));
+                        }
+                        
+                    }
+                    else{ MessageBox.Show("No se pudo mostrar el elemento");}
                     connect.Close();
     
                 }
 
             }
             MessageBox.Show("Debe ingresar algun valor");
-
-
         }
     }
 }
