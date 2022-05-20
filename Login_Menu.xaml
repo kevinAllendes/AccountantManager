@@ -1,0 +1,18 @@
+﻿<Window x:Class="AccountantManager.Login_Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountantManager"
+        mc:Ignorable="d"
+        Title="Log in" Height="400" Width="250">
+    <Grid>
+        <Label Content="Usuario" HorizontalAlignment="Left" Height="28" Margin="25,46,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox Name="TBUsuario" HorizontalAlignment="Left" Height="30" Margin="34,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Height="28" Margin="25,165,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox Name="TBPassword" HorizontalAlignment="Left" Height="30" Margin="34,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191"/>
+        <Button Name="BtnLogin" Content="Iniciar Sesión" HorizontalAlignment="Center" Height="27" Margin="0,278,0,0" VerticalAlignment="Top" Width="165" Click="BtnLogin_Click"/>
+
+
+    </Grid>
+</Window>
