@@ -39,6 +39,9 @@ namespace AccountantManager
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
+            /*
+            https://rjcodeadvance.com/cap-2-login-logout-y-mostrar-datos-del-usuario-validaciones-con-arquitectura-en-capas-poo-c-y-mysql-nivel-intermedio/
+            */
             if (TBUsuario.Text != "")
             {
                 string consultaLogin = "SELECT Pass FROM TableLogin WHERE  Nombre="+TBUsuario.Text.ToString();
