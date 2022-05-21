@@ -23,9 +23,12 @@ namespace AccountantManager
         public MainWindow()
         {
             InitializeComponent();
-
             Login_Menu MiLogin = new Login_Menu();
             MiLogin.ShowDialog();
+            if (! MiLogin.ingreso) this.Close(); 
+            else MiLogin.Close();
+            //if(!MiLogin.ingresoOK())this.Close();
+            //else MiLogin.Close();
         }
     }
 
@@ -33,7 +36,7 @@ namespace AccountantManager
     //Esto es una clase que define a un cliente del A
     //Describe sus caracteristicas y su funcionalidad
     {
-        char[] CATEGORIAS = new char[8] {'A','B','C','D','F','G','H','I','J','K'};
+        char[] CATEGORIAS = new char[10] {'A','B','C','D','F','G','H','I','J','K'};
 
         string nombre_razonSocial,email;
         int Cuil_Cuit;

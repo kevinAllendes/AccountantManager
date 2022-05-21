@@ -23,18 +23,22 @@ namespace AccountantManager
     public partial class Login_Menu : Window
     {
         //Conexion sql a utilizar mas adelante
-        SqlConnection miConexionSql;
+        //SqlConnection miConexionSql;
+
+        //Verificador de Ingreso
+        public bool ingreso = false;
 
         //Cadena de conexion a utilizar
         string miConexion = ConfigurationManager.ConnectionStrings["AccountantManager.Properties.Settings.LoginConnectionString"].ConnectionString;
 
         public Login_Menu()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+        }
 
-            
-
-            
+        public bool ingresoOK()
+        {
+            return ingreso;
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
@@ -62,45 +66,59 @@ namespace AccountantManager
                             UserCache.IdUser = reader.GetInt32(0); 
                             UserCache.LoginName = reader.GetString(1);
                             UserCache.Password = reader.GetString(2);
-            UserCache.FirstName = reader.GetString(3); 
-            UserCache.LastName = reader.GetString(4);
-            UserCache.Position = reader.GetString(5);
-            UserCache.Email = reader.GetString(6);
-                 }
-                      return true;
-                   }
-                   else
-                  return false;
-                   }
-                 }
-            }
+                            UserCache.FirstName = reader.GetString(3); 
+                            UserCache.LastName = reader.GetString(4);
+                            UserCache.Position = reader.GetString(5);
+                            UserCache.Email = reader.GetString(6);
+                        }
+                            return true;
+                        }
+                            else
+                            return false;
+                        }
+                    }
+                }
             */
-            if (TBUsuario.Text != "")
+            if ( (TBUsuario.Text != "") && (PBPass.Password!="") )
             {
-                string consultaLogin = "SELECT Pass FROM TableLogin WHERE  Nombre="+TBUsuario.Text.ToString();
+                string consultaLogin = "SELECT Pass FROM TableLogin WHERE  TableLogin.Nombre = @usuario";
 
                 using (SqlConnection connect = new SqlConnection(miConexion))
                 {
                     SqlCommand cmd = new SqlCommand(consultaLogin, connect);
+                    cmd.Parameters.AddWithValue("@usuario", TBUsuario.Text);
                     connect.Open();
-
                     SqlDataReader reader = cmd.ExecuteReader();
-
-                    if(reader.HasRows)
+                    if (reader.HasRows)
+                    //Comprobamos que ingresamos el usuario correcto
                     {
-                        while (reader.Read())
+                        reader.Read();
+                        if (PBPass.Password == reader.GetString(0))
                         {
-                            MessageBox.Show(reader.GetString(1));
+                            MessageBox.Show("Ingreso el password correcto!.");
+                            this.ingreso = true;
+                            this.Visibility = Visibility.Hidden;
                         }
-                        
                     }
-                    else{ MessageBox.Show("No se pudo mostrar el elemento");}
-                    connect.Close();
-    
+                    else
+                    { 
+                        MessageBox.Show("Contraseña o Usuario Incorrecto!. Por favor pruebe nuevamente.");
+                        TBUsuario.Clear();
+                        PBPass.Clear();
+                    }
                 }
+             }
+        }
 
-            }
-            MessageBox.Show("Debe ingresar algun valor");
+        private void Label_MouseEnter(object sender, MouseEventArgs e)
+        {
+            LblOlvido.FontSize = 11;
+
+        }
+
+        private void LblOlvido_MouseLeave(object sender, MouseEventArgs e)
+        {
+            LblOlvido.FontSize = 10;
         }
     }
 }
