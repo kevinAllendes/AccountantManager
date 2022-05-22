@@ -16,7 +16,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.Linq;
 
-namespace AccountantManager
+namespace ProcedimientosPortal
 {
     //Este procedimiento agrega un nuevo cliente a la BDD
     public void AgregarCliente(string nombre_razon, string correo,int cuilCuit,char categ)

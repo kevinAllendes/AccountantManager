@@ -38,7 +38,7 @@ namespace AccountantManager
 
         public bool ingresoOK()
         {
-            return ingreso;
+            return ingresoCorrecto;
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
@@ -61,7 +61,6 @@ namespace AccountantManager
                         reader.Read();
                         if (PBPass.Password == reader.GetString(0))
                         {
-                            MessageBox.Show("Ingreso el password correcto!.");
                             this.ingresoCorrecto = true;
                             this.Visibility = Visibility.Hidden;
                         }
@@ -87,7 +86,7 @@ namespace AccountantManager
             try{
                 using(SqlConnection connect = new SqlConnection(miConexion))
                 {
-                    SqlCommand cmd = new SqlCommand(consulta,miConexion);
+                    SqlCommand cmd = new SqlCommand(consulta,connect);
                     connect.Open();
                     cmd.Parameters.AddWithValue("@nuevaContraseña",nuevaContraseña);
                     cmd.Parameters.AddWithValue("@usuario",usuario);
