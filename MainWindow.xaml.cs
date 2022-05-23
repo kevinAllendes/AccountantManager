@@ -29,19 +29,17 @@ namespace AccountantManager
         {
             InitializeComponent();
             CBCategorias.ItemsSource = Categorias;
-            //Abrimos Loing menu
-            Login_Menu MiLogin = new Login_Menu();
+            //No Abrimos Loing menu
+           // Login_Menu MiLogin = new Login_Menu();
             
-            //Prueba Child form
             
-            //-------------
-
-
-            //Cargamos DG con los clientes.
-            DGClientes.ItemsSource = Categorias;
-            MiLogin.ShowDialog();
-            if (! MiLogin.ingresoCorrecto) this.Close(); 
-            else MiLogin.Close();
+            //********************************************
+            //Deshabilitamos el Login.
+            //MiLogin.ShowDialog();
+            //if (! MiLogin.ingresoCorrecto) this.Close(); 
+            //else MiLogin.Close();
+            //********************************************
+            
             //Rellenamos la tabla clientes
             RellenarTablaClientes();
 
@@ -81,12 +79,25 @@ namespace AccountantManager
             miContexto = new DataClasses1DataContext(miConexion);
             DGClientes.SelectedValuePath = "IDCliente";
             DGClientes.ItemsSource = miContexto.Clientes;
+
         }
 
         private void EliminarCliente()
         {
-            var CelInfo = DGClientes.SelectedCells[0];
-            MessageBox.Show(CelInfo.Column);
+            /*
+                Ejemplo captura de un dato de una celda
+            */
+            //Devuelve la fila completa seleccionada
+            Clientes miClienteSeleccionado = DGClientes.CurrentItem;
+            //Establecemos la conexión del dbml con la base de datos
+            DataClasses1DataContext dataContext;
+            dataContext = new DataClasses1DataContext(miConexion);
+
+            //Eliminamos el cliente
+            dataContext.Clientes.DeleteOnSubmit(miClienteSeleccionado);
+            dataContext.SubmitChanges();
+            
+
         }
 
         private void BtnEliminar_Click(object sender, RoutedEventArgs e)
