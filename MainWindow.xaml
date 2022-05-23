@@ -5,25 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AccountantManager"
         mc:Ignorable="d"
-        Title="Accountant Manager" Height="492" Width="810" ResizeMode="NoResize">
-    <Grid Margin="0,0,0,3">
-        <Rectangle HorizontalAlignment="Left" Height="436" Margin="10,12,0,0" Stroke="Black" VerticalAlignment="Top" Width="293"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Height="25" Margin="38,49,0,0" VerticalAlignment="Top" Width="105"/>
-        <Label Content="Agregar Nuevo Cliente" HorizontalAlignment="Left" Height="37" Margin="70,12,0,0" VerticalAlignment="Top" Width="191" FontWeight="Bold" FontStyle="Italic"/>
-        <TextBox Name="TBNombre"  HorizontalAlignment="Left" Height="22" Margin="54,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
-        <Label Content="Email" HorizontalAlignment="Left" Height="25" Margin="38,126,0,0" VerticalAlignment="Top" Width="105"/>
-        <TextBox Name="TBEmail"  HorizontalAlignment="Left" Height="22" Margin="54,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
-        <Label Content="CUIL/CUIT" HorizontalAlignment="Left" Height="25" Margin="38,194,0,0" VerticalAlignment="Top" Width="105"/>
-        <TextBox Name="TBCuilCuit"  HorizontalAlignment="Left" Height="22" Margin="54,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
-        <Label Content="Si lo es seleccione su Categoria" HorizontalAlignment="Left" Height="36" Margin="37,338,0,0" VerticalAlignment="Top" Width="186"/>
-        <ComboBox Name="CBCategorias" HorizontalAlignment="Left" Height="19" Margin="228,340,0,0" VerticalAlignment="Top" Width="34"/>
-        <Label Content="Es Monotributista?" HorizontalAlignment="Left" Height="25" Margin="35,270,0,0" VerticalAlignment="Top" Width="170"/>
-        <RadioButton Name="RBEsMonotributista" Content="SI" HorizontalAlignment="Left" Height="26" Margin="210,257,0,0" VerticalAlignment="Top" Width="44" GroupName="Mono" IsChecked="True"/>
-        <RadioButton Name="RBNoEsMonotributista" Content="NO" HorizontalAlignment="Left" Height="25" Margin="208,287,0,0" VerticalAlignment="Top" Width="45" GroupName="Mono"/>
-        <Button Click="Button_Click" Content="Agregar Cliente" HorizontalAlignment="Left" Height="21" Margin="86,389,0,0" VerticalAlignment="Top" Width="146"/>
-        <DataGrid Name="DGClientes" HorizontalAlignment="Left" Height="137" Margin="327,41,0,0" VerticalAlignment="Top" Width="411" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Label Content="Mis Clientes!. " HorizontalAlignment="Center" Height="30" Margin="0,6,0,0" VerticalAlignment="Top" Width="138" FontWeight="Bold" FontSize="14"/>
-        <Button Click="BtnEliminar_Click" Name="BtnEliminar" Content="Eliminar" HorizontalAlignment="Left" Height="25" Margin="648,189,0,0" VerticalAlignment="Top" Width="90"/>
-
-    </Grid>
+        Title="Accountant Manager" Height="492" Width="810" ResizeMode="CanResize">
+    <Grid Margin="0,0,0,3"/>
 </Window>

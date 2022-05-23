@@ -1,0 +1,25 @@
+﻿<Window x:Class="AccountantManager.FormAgregarCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountantManager"
+        mc:Ignorable="d"
+        Title="Nuevo Cliente..." Height="450" Width="432">
+    <Grid>
+        <Label Content="Nombre o Razon Social" HorizontalAlignment="Left" Height="25" Margin="38,49,0,0" VerticalAlignment="Top" Width="172"/>
+        <Label Content="Complete los datos del nuevo cliente" HorizontalAlignment="Left" Height="37" Margin="12,10,0,0" VerticalAlignment="Top" Width="250" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Name="TBNombre"  HorizontalAlignment="Left" Height="22" Margin="200,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138"/>
+        <Label Content="Email" HorizontalAlignment="Left" Height="24" Margin="71,91,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox Name="TBEmail"  HorizontalAlignment="Left" Height="22" Margin="200,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
+        <Label Content="CUIL/CUIT" HorizontalAlignment="Left" Height="25" Margin="54,148,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox Name="TBCuilCuit"  HorizontalAlignment="Left" Height="22" Margin="164,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
+        <Label Content="Si lo es seleccione su Categoria" HorizontalAlignment="Left" Height="36" Margin="176,233,0,0" VerticalAlignment="Top" Width="186" FontSize="11"/>
+        <ComboBox Name="CBCategorias" HorizontalAlignment="Left" Height="18" Margin="367,238,0,0" VerticalAlignment="Top" Width="47" FontSize="10" IsEnabled="False"/>
+        <RadioButton Name="RBEsMonotributista" Checked="RBEsMonotributista_Checked" Content="Monotributista...." HorizontalAlignment="Left" Height="27" Margin="38,237,0,0" VerticalAlignment="Top" Width="133" GroupName="Mono" IsChecked="True"/>
+        <RadioButton Name="RBResponsableI" Content="Responsabel Inscripto" HorizontalAlignment="Left" Height="25" Margin="37,268,0,0" VerticalAlignment="Top" Width="156" GroupName="Mono"/>
+        <Button Name="AgregarCliente" Click="Button_Click" Content="Agregar Cliente" HorizontalAlignment="Left" Height="25" Margin="137,363,0,0" VerticalAlignment="Top" Width="146"/>
+        <RadioButton Name="RBBajoDependencia" Content="Bajo Dependencia" HorizontalAlignment="Left" Height="25" Margin="37,305,0,0" VerticalAlignment="Top" Width="156" GroupName="Mono"/>
+
+    </Grid>
+</Window>

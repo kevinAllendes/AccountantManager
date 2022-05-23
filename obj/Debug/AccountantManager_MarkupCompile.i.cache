@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\App.xaml
-2-1262780246
+4-1225949196
 
-9-1379148114
+11-1202620284
 15-1732740729
-Login_Menu.xaml;MainWindow.xaml;
+FormAgregarCliente.xaml;Login_Menu.xaml;MainWindow.xaml;PortalClientes.xaml;
 
-False
+True
 
