@@ -24,8 +24,8 @@ namespace AccountantManager
         string miConexion = ConfigurationManager.ConnectionStrings["AccountantManager.Properties.Settings.LoginConnectionString"].ConnectionString;
         public FormAgregarCliente()
         {
-            CBCategorias.ItemsSource = Categorias;
             InitializeComponent();
+            CBCategorias.ItemsSource = Categorias;
         }
 
         public void Agregar(string nombre_razon, string correo, int cuilCuit, char categ)

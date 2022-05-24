@@ -25,6 +25,7 @@ namespace AccountantManager
         public PortalClientes()
         {
             InitializeComponent();
+            RellenarTablaClientes();
 
         }
 

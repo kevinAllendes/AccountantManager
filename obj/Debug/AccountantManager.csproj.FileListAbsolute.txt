@@ -16,3 +16,7 @@ C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\De
 C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\AccountantManager.csproj.CoreCompileInputs.cache
 C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\AccountantManager.exe
 C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\AccountantManager.pdb
+C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\FormAgregarCliente.g.cs
+C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\PortalClientes.g.cs
+C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\FormAgregarCliente.baml
+C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\PortalClientes.baml

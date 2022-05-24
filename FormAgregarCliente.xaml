@@ -19,7 +19,7 @@
         <RadioButton Name="RBEsMonotributista" Checked="RBEsMonotributista_Checked" Content="Monotributista...." HorizontalAlignment="Left" Height="27" Margin="38,237,0,0" VerticalAlignment="Top" Width="133" GroupName="Mono" IsChecked="True"/>
         <RadioButton Name="RBResponsableI" Content="Responsabel Inscripto" HorizontalAlignment="Left" Height="25" Margin="37,268,0,0" VerticalAlignment="Top" Width="156" GroupName="Mono"/>
         <Button Name="AgregarCliente" Click="Button_Click" Content="Agregar Cliente" HorizontalAlignment="Left" Height="25" Margin="137,363,0,0" VerticalAlignment="Top" Width="146"/>
-        <RadioButton Name="RBBajoDependencia" Content="Bajo Dependencia" HorizontalAlignment="Left" Height="25" Margin="37,305,0,0" VerticalAlignment="Top" Width="156" GroupName="Mono"/>
+        <RadioButton Name="RBBajoDependencia" Content="Bajo Dependencia" HorizontalAlignment="Left" Height="25" Margin="37,305,0,0" VerticalAlignment="Top" Width="156" GroupName="Mono" IsChecked="True"/>
 
     </Grid>
 </Window>

@@ -29,7 +29,7 @@ namespace AccountantManager
         public MainWindow()
         {
             InitializeComponent();
-            CBCategorias.ItemsSource = Categorias;
+            
             //No Abrimos Loing menu
            // Login_Menu MiLogin = new Login_Menu();
             
@@ -45,10 +45,22 @@ namespace AccountantManager
 
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            PortalClientes miPortalCliente = new PortalClientes();
+            miPortalCliente.ShowDialog();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            FormAgregarCliente miFormAgregarCliente = new FormAgregarCliente();
+            miFormAgregarCliente.ShowDialog();
+        }
+
         //Este procedimiento agrega un nuevo cliente a la BDD
 
 
 
-       
+
     }
 }
