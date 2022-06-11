@@ -1,0 +1,16 @@
+﻿<Window x:Class="AccountantManager.Buscar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountantManager"
+        mc:Ignorable="d"
+        Title="Buscar" Height="135" Width="517" WindowStyle="ToolWindow">
+    <Grid Margin="0,0,0,2" Background="#FFF2EEE4">
+        <Label Name="LblQBusco" Content="Ingrese Nombre a Buscar" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="auto"/>
+        <TextBox Name="TBBuscar" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Height="25" Margin="10,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272"/>
+        <Button Name="BtnBuscar" Click="BtnBuscar_Click" Focusable="True" Content="Buscar.." HorizontalAlignment="Left" Height="25" Margin="300,0,0,0" VerticalAlignment="Center" Width="139"/>
+        <Button Click="BtnSalir_Click" Name="BtnSalir" Content="Salir" HorizontalAlignment="Left" Height="15" Margin="429,73,0,0" VerticalAlignment="Top" Width="61" FontSize="9"/>
+
+    </Grid>
+</Window>

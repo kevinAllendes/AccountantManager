@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AccountantManager"
         mc:Ignorable="d"
         Title="Mis Clientes" Height="473" Width="708" ResizeMode="NoResize">
-    <Grid Margin="0,0,5,3">
+    <Grid Margin="0,0,5,3" Background="#FFF2EEE4">
         <DataGrid Name="DGClientes" HorizontalAlignment="Center" Height="326" Margin="0,40,0,0" VerticalAlignment="Top" Width="680" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <Button Click="BtnEliminar_Click" Name="BtnEliminar" Content="Eliminar Cliente" HorizontalAlignment="Left" Height="25" Margin="30,382,0,0" VerticalAlignment="Top" Width="154"/>
 
@@ -16,8 +16,8 @@
                 <TextBlock Text="... " Name="MiTextBlock" HorizontalAlignment="Right"></TextBlock>
             </StatusBarItem>
         </StatusBar>
-        <Button Name="BtnBuscar" Content="Buscar" HorizontalAlignment="Left" Height="25" Margin="432,10,0,0" VerticalAlignment="Top" Width="101"/>
-        <TextBox Name="TBBuscar" HorizontalAlignment="Left" Height="25" Margin="240,10,0,0" TextWrapping="Wrap" Text="Ingrese un nombre" VerticalAlignment="Top" Width="160" FontSize="9" FontStyle="Italic"/>
-        <Button Name="BtnSalir" Content="Salir" HorizontalAlignment="Left" Height="27" Margin="584,395,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button Name="BtnBuscar" Click="BtnBuscar_Click" Content="Buscar" HorizontalAlignment="Left" Height="25" Margin="432,10,0,0" VerticalAlignment="Top" Width="101"/>
+        <TextBox TextChanged="TBBuscar_TextChanged" Name="TBBuscar" HorizontalAlignment="Left" Height="25" Margin="240,10,0,0" TextWrapping="Wrap" Text="Ingrese un nombre" VerticalAlignment="Top" Width="160" FontSize="11" FontStyle="Italic"/>
+        <Button Name="BtnSalir" Click ="BtnSalir_Click" Content="Salir" HorizontalAlignment="Left" Height="27" Margin="573,382,0,0" VerticalAlignment="Top" Width="108"/>
     </Grid>
 </Window>

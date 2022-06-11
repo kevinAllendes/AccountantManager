@@ -20,3 +20,5 @@ C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\De
 C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\PortalClientes.g.cs
 C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\FormAgregarCliente.baml
 C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\PortalClientes.baml
+C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\Buscar.g.cs
+C:\Users\Kevin Allendes\Desktop\Proyectos Visual Studio\AccountantManager\obj\Debug\Buscar.baml

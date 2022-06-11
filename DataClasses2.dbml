@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Login" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-DSACTOL\SQLEXPRESS;Initial Catalog=Login;Integrated Security=True" SettingsObjectName="AccountantManager.Properties.Settings" SettingsPropertyName="LoginConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Operaciones" Member="Operaciones">
+    <Type Name="Operaciones">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_Trabajo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Costo_Total" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Trabajos_Operaciones" Member="Trabajos" ThisKey="ID_Trabajo" OtherKey="ID" Type="Trabajos" IsForeignKey="true" />
+      <Association Name="Clientes_Operaciones" Member="Clientes" ThisKey="ID_Cliente" OtherKey="IDCliente" Type="Clientes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Trabajos" Member="Trabajos">
+    <Type Name="Trabajos">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Costo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Trabajos_Operaciones" Member="Operaciones" ThisKey="ID" OtherKey="ID_Trabajo" Type="Operaciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clientes" Member="Clientes">
+    <Type Name="Clientes">
+      <Column Name="IDCliente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre_RazonSocial" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Categoria" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CUIL_CUIT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Clientes_Operaciones" Member="Operaciones" ThisKey="IDCliente" OtherKey="ID_Cliente" Type="Operaciones" />
+    </Type>
+  </Table>
+</Database>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,12 +31,20 @@ namespace AccountantManager
 
         }
 
+        public  PortalClientes(string ClienteBuscado)
+        {
+            InitializeComponent();
+            RealizarBusqueda(ClienteBuscado);
+
+        }
+
         private void RellenarTablaClientes()
         {
-            DataClasses1DataContext miContexto;
-            miContexto = new DataClasses1DataContext(miConexion);
+            DataClasses2DataContext miContexto;
+            miContexto = new DataClasses2DataContext(miConexion);
             //DGClientes.SelectedValuePath = "IDCliente";
             DGClientes.ItemsSource = miContexto.Clientes;
+            
 
         }
 
@@ -46,8 +56,8 @@ namespace AccountantManager
             //Devuelve la fila completa seleccionada
 
             //Establecemos la conexión del dbml con la base de datos
-            DataClasses1DataContext dataContext;
-            dataContext = new DataClasses1DataContext(miConexion);
+            DataClasses2DataContext dataContext;
+            dataContext = new DataClasses2DataContext(miConexion);
 
             Clientes clienteABorrar = (Clientes)DGClientes.SelectedItem;
             // int index = DGClientes.CurrentCell.Column.DisplayIndex;
@@ -89,5 +99,48 @@ namespace AccountantManager
             RellenarTablaClientes();
 
         }
+
+        private void BtnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            RealizarBusqueda(TBBuscar.Text);
+
+        }
+
+        private void BtnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void TBBuscar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TBBuscar.Text == "Ingrese un nombre")
+            {
+                TBBuscar.Text = "";
+                TBBuscar.FontSize = 12;
+            }
+        }
+
+        private void RealizarBusqueda(string aBuscar)
+        {
+            DataClasses2DataContext dataContext;
+            dataContext = new DataClasses2DataContext(miConexion);
+
+            List<Clientes> miListaclientes = dataContext.Clientes.ToList();
+
+            List<Clientes> clientesBuscados = new List<Clientes>();
+
+            foreach (Clientes cli in miListaclientes)
+            {
+                if (cli.Nombre_RazonSocial.Contains(aBuscar))
+                {
+                    clientesBuscados.Add(cli);
+                }
+            }
+            DGClientes.ItemsSource = clientesBuscados;
+
+        }
+            
+        
     }
 }

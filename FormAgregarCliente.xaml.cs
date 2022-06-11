@@ -34,8 +34,8 @@ namespace AccountantManager
             if ((nombre_razon != "") && (correo.Contains('@')) && (cuilCuit != 0) && (Categorias.Contains(categ)))
             {
                 //Establecemos la conexión del dbml con la base de datos
-                DataClasses1DataContext dataContext;
-                dataContext = new DataClasses1DataContext(miConexion);
+                DataClasses2DataContext dataContext;
+                dataContext = new DataClasses2DataContext(miConexion);
 
                 //Definimos el nuevo cliente
                 Clientes miNuevoCliente = new Clientes() { Nombre_RazonSocial = nombre_razon, Email = correo, CUIL_CUIT = cuilCuit, Categoria = categ.ToString() };

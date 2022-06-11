@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AccountantManager"
         mc:Ignorable="d"
         Title="Nuevo Cliente..." Height="450" Width="432">
-    <Grid>
+    <Grid Background="#FFF2EEE4">
         <Label Content="Nombre o Razon Social" HorizontalAlignment="Left" Height="25" Margin="38,49,0,0" VerticalAlignment="Top" Width="172"/>
         <Label Content="Complete los datos del nuevo cliente" HorizontalAlignment="Left" Height="37" Margin="12,10,0,0" VerticalAlignment="Top" Width="250" FontWeight="Bold" FontStyle="Italic"/>
         <TextBox Name="TBNombre"  HorizontalAlignment="Left" Height="22" Margin="200,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138"/>

@@ -57,6 +57,24 @@ namespace AccountantManager
             miFormAgregarCliente.ShowDialog();
         }
 
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MIBuscarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Buscar buscadorCliente = new Buscar("Ingrese el Nombre del cliente");
+            buscadorCliente.ShowDialog();
+            if (buscadorCliente.DATOABUSCAR != null)
+            {
+                PortalClientes miPortalCliente = new PortalClientes(buscadorCliente.DATOABUSCAR);
+                miPortalCliente.ShowDialog();
+            }
+            buscadorCliente.Close();
+
+        }
+
         //Este procedimiento agrega un nuevo cliente a la BDD
 
 
