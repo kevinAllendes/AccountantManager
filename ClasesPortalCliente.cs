@@ -21,6 +21,8 @@ namespace ProcedimientosPortal
     //Este procedimiento agrega un nuevo cliente a la BDD
     public void AgregarCliente(string nombre_razon, string correo,int cuilCuit,char categ)
     {
+
+        //SE agrega un comentario
         //La categoria N define a  un asalariao que no es monotributista
         char[] CATEGORIAS = new char[11] {'A','B','C','D','F','G','H','I','J','K','N'};
 
