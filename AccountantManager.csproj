@@ -105,10 +105,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PortalOperaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PortalClientes.xaml.cs">
       <DependentUpon>PortalClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PortalOperaciones.xaml.cs">
+      <DependentUpon>PortalOperaciones.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -159,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="small-business-accountant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="stock-vector-woman-financial-accountant-vector-illustration-of-national-accountant-s-day-1525378253.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

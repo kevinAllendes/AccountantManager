@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AccountantManager"
         mc:Ignorable="d"
-        Title="Accountant Manager" Height="492" Width="810" ResizeMode="CanResize" WindowState="Maximized" >
+        Title="Accountant Manager" Height="664" Width="929" ResizeMode="CanResize" WindowState="Normal" >
     <Window.Background>
         <ImageBrush ImageSource="/small-business-accountant.jpg"/>
     </Window.Background>
@@ -20,7 +20,7 @@
             </MenuItem>
             <Separator Width="10"/>
             <MenuItem Header="Operaciones">
-                <MenuItem Header="Ver operaciones disponibles"/>
+                <MenuItem Click="MenuItem_Click_3" Header="Ver operaciones disponibles"/>
                 <MenuItem Header="Agregar nueva operación"/>
                 <MenuItem Header="Modificar operación existente"/>
                 <MenuItem Header="Eliminar una operación"/>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="AccountantManager.PortalOperaciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountantManager"
+        mc:Ignorable="d"
+        Title="PortalOperaciones" Height="439" Width="800">
+    <Window.Background>
+        <ImageBrush Stretch="Uniform"/>
+    </Window.Background>
+    <Grid Background="#FF99B4D1" Margin="0,0,0,0">
+        <StatusBar HorizontalAlignment="Center" Height="16" Margin="0,407,0,0" VerticalAlignment="Top" Width="800"/>
+        <Ellipse HorizontalAlignment="Left" Height="343" Margin="10,30,0,0" Stroke="Black" VerticalAlignment="Top" Width="306" StrokeEndLineCap="Flat" StrokeThickness="2">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/stock-vector-woman-financial-accountant-vector-illustration-of-national-accountant-s-day-1525378253.jpg"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Grid>
+            <DataGrid IsReadOnly="False" Name="DGTrabajos" HorizontalAlignment="Left" Height="165" Margin="340,32,0,0" VerticalAlignment="Top" Width="366" >
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="Id Trabajo" Binding="{Binding Path=ID}" />
+
+                    <DataGridTextColumn Header="Nombre Trabajo" Binding="{Binding Mode=TwoWay, Path=Nombre}" />
+
+                    <DataGridTextColumn Header="Costo" Binding="{Binding Mode=TwoWay, Path=Costo}" />
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+
+
+    </Grid>
+</Window>

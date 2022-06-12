@@ -75,6 +75,12 @@ namespace AccountantManager
 
         }
 
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            PortalOperaciones miPortal = new PortalOperaciones();
+            miPortal.ShowDialog();
+        }
+
         //Este procedimiento agrega un nuevo cliente a la BDD
 
 

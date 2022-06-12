@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("small-business-accountant.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("stock-vector-woman-financial-accountant-vector-illustration-of-national-accountan" +
+    "t-s-day-1525378253.jpg")]
 
 
